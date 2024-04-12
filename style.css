@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.main-container {
+  flex: 1;
+  background: #121212;
+  height: 88vh;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.song-container {
+  margin: 1rem 0;
+}
+
+.song {
+  display: grid;
+  grid-template-columns: 30vw 30vw 10vw auto;
+  justify-content: space-between;
+  align-items: start;
+  margin: 1.5rem;
+}
+
+.title-container {
+  display: flex;
+}
+
+.album-name,
+.date-added,
+.duration {
+  color: #a7a7a7;
+  max-width: 20vw;
+  text-align: start;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  font-size: 0.95rem;
+}
+
+.song-name {
+  margin-left: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.song-name .title:hover {
+  text-decoration: underline;
+}
+
+.artists   {
+  font-size: 0.86rem;
+  color: #a7a7a7;
+  margin-top: 0.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.poster {
+  height: 3rem;
+  border-radius: 4px;
+}
+
+.music-player {
+  position: fixed;
+  bottom: 0;
+  background-color: #000;
+  height: 80px;
+  width: 100vw;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left,
+.middle,
+.right {
+  width: 40%;
+}
+
+.left {
+  height: 100%;
+  display: flex;
+  margin-right: 1rem;
+  justify-content: start;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.left .poster {
+  height: 3.5rem;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.left .title {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.left .artist {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.left .player-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.middle img:nth-child(1), 
+.middle img:nth-child(3) {
+  height: 2rem;
+  fill: #a7a7a7;
+}
+
+.middle img:nth-child(2){
+  height: 2.5rem;
+}
+
+.seekbar {
+  width: 100%;
+}
+
+.seekbar input {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+}
+
+.seekbar input::-webkit-slider-runnable-track{
+  height: 4px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.seekbar input::-webkit-slider-thumb{
+  width: 5px;
+  height: 5px;
+  margin-top: -5px;
+}
+
+
+.right img{
+  height: 1.4rem;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color: royalblue;
+    position: absolute;
+    transition: all .4s ease-in-out;
+    display: none;
+}
+
+@media (max-width: 431px) {
+  .album-name,
+  .date-added,
+  .duration{
+    display: none;
+  }
+
+  .song-name .title {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+    cursor: pointer;
+  }
+
+  .middle {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .left, 
+  .right input{
+    display: none;
+    width: 100%;
+  }
+  
+  .right{
+    gap: 1rem;
+
+  }
+
+  .main-container {
+    margin: 0rem;
+    padding: 0rem;
+    width: 100vw;
+    overflow: hidden;
+    text-wrap: wrap;
+  }
+
+  .title-container {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+        <div class="song-container"></div>
+      </div>
+      <div class="music-player">
+        <div class="left">
+          <img
+            class="poster"
+            src="https://i.scdn.co/image/ab67616d00004851510fdfa6b5642fbe2623a644"
+            alt=""
+          />
+          <div>
+            <div class="title">Jeene Laga Hoon (Lofi Mix)</div>
+            <div class="artists">Atif Aslam, Shreya Ghoshal, Sachin-Jigar</div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="player-btns">
+            <img src="./assets/icons/skip-previous.svg" alt="icon">
+            <img id="playPause" src="./assets/icons/play.svg" alt="icon">
+            <img src="./assets/icons/skip-next.svg" alt="icon">
+          </div>
+          <div class="seekbar">
+            <input type="range" value="0" min="0" max="100">
+          </div>
+        </div>
+        <div class="right">
+          <img src="./assets/icons/volume_up.svg" alt="icon">
+          <input type="range" value="40" min="0" max="100" id="volumebar">
+          <img src="./assets/icons/open-fullscreen.svg" alt="icon">
+        </div>
+      </div>
+    </div>
+    <div class="full-screen">Full Screen</div>
+  </body>
+</html>
