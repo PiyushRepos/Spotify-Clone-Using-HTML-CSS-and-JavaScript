@@ -209,16 +209,4 @@ function muteUnmute() {
       }
     });
 }
-if(window.innerWidth > "431"){
-  volumeUp.addEventListener('click', muteUnmute);
-}
-
-function mobileVolumebar() {
-    volumeUp.addEventListener("click", () => {
-      volumebar.classList.toggle("showOnMobile");
-    }); 
-}
-
-if(window.innerWidth <= "431"){
-  volumeUp.addEventListener('click', mobileVolumebar);
-}
+muteUnmute();
