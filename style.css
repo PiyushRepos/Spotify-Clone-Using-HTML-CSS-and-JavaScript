@@ -29,6 +29,7 @@ body {
   height: 88vh;
   margin: 0.5rem;
   padding: 1rem;
+  overflow-y: auto;
 }
 
 .song-container {

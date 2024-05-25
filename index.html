@@ -34,7 +34,7 @@
           <div class="seekbar">
             <span id="currentTime">0:00</span>
             <input id="seekbar" type="range" value="10" min="0" max="100">
-            <span id="totalDuration">2:21</span>
+            <span id="totalDuration">0:00</span>
           </div>
         </div>
         <div class="right">
@@ -44,6 +44,12 @@
         </div>
       </div>
     </div>
-    <div class="full-screen">Full Screen</div>
+    <div class="full-screen">
+      <input style="padding: 0.4rem;" type="text" id="songName" placeholder="Song name">
+      <input style="padding: 0.4rem;" type="text" id="artistName" placeholder="Artist name">
+      <input style="padding: 0.4rem;" type="text" id="date" placeholder="Date">
+      <input style="padding: 0.4rem;" type="text" id="duration" placeholder="duration">
+      <button id="addBtn" style="padding: 0.4rem;">Add song</button>
+    </div>
   </body>
 </html>

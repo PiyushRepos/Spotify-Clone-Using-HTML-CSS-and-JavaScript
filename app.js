@@ -179,13 +179,13 @@ audioElem.addEventListener("timeupdate", () => {
 });
 
 // updating seekbar on user changes
-seekbar.addEventListener("change", (changedTime) => {
+seekbar.addEventListener("input", (changedTime) => {
   changedTime = Math.floor((seekbar.value * audioElem.duration) / 100);
   audioElem.currentTime = changedTime;
 });
 
 // updating volumebar
-volumebar.addEventListener("change", () => {
+volumebar.addEventListener("input", () => {
   volumebar.setAttribute(
     "style",
     `background-image: linear-gradient(to right, #fff ${volumebar.value}%, #4D4D4D ${volumebar.value}%);`
@@ -259,3 +259,9 @@ fullScreen.addEventListener("click", () => {
   fullScreen.style.display = "none";
   document.exitFullscreen();
 });
+
+if(audioElem.played){
+  playPauseBtn.src = "./assets/icons/play.svg";
+}else{
+  playPauseBtn.src = "./assets/icons/pause.svg";
+}
